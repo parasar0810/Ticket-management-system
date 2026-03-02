@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raise a Ticket | Tata Motors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo-container">
+                <i data-lucide="shield-check" style="color: var(--tata-blue); width: 32px; height: 32px;"></i>
+                <h1>Tata Motors</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="nav-item"><i data-lucide="layout-dashboard"></i> <span>Dashboard</span></a></li>
+                <li><a href="ticket.html" class="nav-item active"><i data-lucide="plus-circle"></i> <span>Raise Ticket</span></a></li>
+            </ul>
+            <div class="logout-btn" onclick="logout()">
+                <i data-lucide="log-out"></i> <span>Logout</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header-row">
+                <div class="page-title">
+                    <h2>Raise a Ticket</h2>
+                    <p style="color: var(--text-secondary);">Fill in the details to submit a new support request</p>
+                </div>
+            </header>
+
+            <div class="container" style="margin: 0; max-width: 1000px; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                <form id="ticketForm" enctype="multipart/form-data">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div class="form-group">
+                            <label for="agency">Agency</label>
+                            <select id="agency" name="agency" required>
+                                <option value="">Select Agency</option>
+                                <option value="Agency 1">Agency 1</option>
+                                <option value="Agency 2">Agency 2</option>
+                                <option value="Agency 3">Agency 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="Department 1">Department 1</option>
+                                <option value="Department 2">Department 2</option>
+                                <option value="Department 3">Department 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="text" id="contactNumber" name="contactNumber" placeholder="Contact Number" required> 
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Contact Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="Your Email" required>      
+                        </div>
+                        <div class="form-group">
+                            <label for="machineName">Machine Name</label>
+                            <input type="text" id="machineName" name="machineName" placeholder="Machine Name" required>       
+                        </div>
+                        <div class="form-group">
+                            <label for="impact">Impact Level</label>
+                            <select id="impact" name="impact" required>
+                                <option value="">Select Impact Level</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Network">Network</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subCategory">Sub Category</label>
+                            <select id="subCategory" name="subCategory" required>
+                                <option value="">Select Sub Category</option>
+                                <option value="Printer">Printer</option>
+                                <option value="Computer">Computer</option>
+                                <option value="Router">Router</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is the issue?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" placeholder="Provide detailed information about the problem..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment">Attachment (max 4MB)</label>
+                        <input type="file" id="attachment" name="attachment" accept="*/*" style="padding: 10px;">
+                    </div>
+                    <button type="submit" class="btn-primary" style="margin-top: 24px; font-size: 1.125rem;">Submit Ticket</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

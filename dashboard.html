@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal | Tata Motors</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo-container">
+                <i data-lucide="shield-check" style="color: var(--tata-blue); width: 32px; height: 32px;"></i>
+                <h1>Tata Motors</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="nav-item active"><i data-lucide="layout-dashboard"></i> <span>User Portal</span></a></li>
+                <li><a href="ticket.html" class="nav-item"><i data-lucide="plus-circle"></i> <span>Raise Ticket</span></a></li>
+            </ul>
+            <div class="logout-btn" onclick="logout()">
+                <i data-lucide="log-out"></i> <span>Logout</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header-row">
+                <div class="page-title">
+                    <h2>User Ticket History</h2>
+                    <p style="color: var(--text-secondary);">Welcome, <span id="displayUsername">User</span>. Track your support requests below.</p>
+                </div>
+                <a href="ticket.html" class="btn-primary" style="width: auto;"><i data-lucide="plus"></i> Raise New Ticket</a>
+            </header>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <p class="stat-label">My Total Tickets</p>
+                    <p id="stat-total" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Currently Open</p>
+                    <p id="stat-open" class="stat-value" style="color: var(--success);">0</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Resolved</p>
+                    <p id="stat-closed" class="stat-value" style="color: var(--text-secondary);">0</p>
+                </div>
+            </div>
+
+            <h3>My Ticket List</h3>
+            <div id="userTicketsList" class="ticket-grid" style="margin-top: 24px;">
+                <!-- User tickets will be loaded here -->
+            </div>
+        </main>
+    </div>
+    <script src="app.js?v=2"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
