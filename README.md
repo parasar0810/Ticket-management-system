@@ -1,6 +1,6 @@
 # Modern Enterprise Ticketing & Issue Management Portal
 
-This project is a **Modern Enterprise Ticketing & Issue Management Portal** specifically designed for **Tata Motors**. It serves as a centralized bridge between on-ground workers/customers and the administrative support team, ensuring that operational hurdles are reported, tracked, and resolved with high efficiency.
+This project is a **Modern Enterprise Ticketing & Issue Management Portal**. It serves as a centralized bridge between on-ground workers/customers and the administrative support team, ensuring that operational hurdles are reported, tracked, and resolved with high efficiency.
 
 ## 🛠 Project Overview
 The system provides a high-performance, role-based environment where communication is streamlined and data-driven. It transitions away from manual or legacy reporting methods into a sleek, automated digital ecosystem.
